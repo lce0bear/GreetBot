@@ -36,9 +36,12 @@ print("Waking up Greetbot...")
 
 # Uploading knowledge base files
 docs = [
-    "Fisat-Hand-book-25-2026.pdf", "Annual-Report-2023-24.pdf",
-    "Innovation-NIRF-2025.pdf", "MCA-24-25-prospectus.pdf",
-    "M.Tech-Prospectus-2025.pdf", "patents.txt"
+    "knowledge_base/Fisat-Hand-book-25-2026.pdf", 
+    "knowledge_base/Annual-Report-2023-24.pdf",
+    "knowledge_base/Innovation-NIRF-2025.pdf", 
+    "knowledge_base/MCA-24-25-prospectus.pdf",
+    "knowledge_base/M.Tech-Prospectus-2025.pdf", 
+    "knowledge_base/patents.txt"
 ]
 
 uploaded_docs = []
@@ -163,7 +166,10 @@ thread.start()
 
 # Initialize vision model
 print("Loading SSD MobileNet...")
-net = cv2.dnn.readNetFromCaffe("deploy.prototxt", "res10_300x300_ssd_iter_140000.caffemodel")
+net = cv2.dnn.readNetFromCaffe(
+    "vision_models/deploy.prototxt", 
+    "vision_models/res10_300x300_ssd_iter_140000.caffemodel"
+)
 
 cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
