@@ -1,0 +1,10 @@
+# Python caches
+__pycache__/
+*.pyc
+
+# Environmental variables (NEVER UPLOAD API KEYS!)
+.env
+
+# Audio output generated dynamically
+reply.mp3
+*.wav
